@@ -30,7 +30,7 @@ source=(
         'oracle-xe.service'
 )
 
-DLAGENTS+=('manual::/usr/bin/echo The source file for this package needs to be downloaded manually, since it requires a login and is not redistributable. Please visit http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html')
+DLAGENTS+=('manual::/usr/bin/echo The source file for this package needs to be downloaded manually, since it requires a login and is not redistributable. Please visit http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html. Furthermore, this PKGBUILD must be updated to reflect a different filename.')
 
  md5sums=(
         '56af7b3b58abdee310aa74f8f88e16ad'
@@ -53,10 +53,6 @@ package() {
     mkdir -p $pkgdir/etc/rc.d
     cp $srcdir/oracle-xe-18c $pkgdir/etc/rc.d/
     chmod +x $pkgdir/etc/rc.d/oracle-xe-18c
-
-    #Fix for ***[FATAL] [DBT-50000] Unable to check for available memory.****
-    corr1="s_-sampleSchema_-J-Doracle.assistants.dbca.validate.ConfigurationParams=false -sampleSchema_g"
-    sed -i "${corr1}" $pkgdir/etc/rc.d/oracle-xe-18c
 
     mkdir -p $pkgdir/etc/sysconfig
     cp $srcdir/oracle-xe-18c.conf $pkgdir/etc/sysconfig
