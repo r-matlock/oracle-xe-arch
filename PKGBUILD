@@ -6,6 +6,7 @@
 # Contributor: siasia
 # Contributor: Lukas Jirkovsky <l.jirkovsky@gmail.com>
 # Contributor: JuliusTZM <julius dot tzm at gmail dot com>
+# Contributor: Raleigh Matlock <raleighman2@gmail.com>
 
 pkgname=oracle-xe
 pkgver=18c
@@ -35,7 +36,7 @@ DLAGENTS+=('manual::/usr/bin/echo The source file for this package needs to be d
         '56af7b3b58abdee310aa74f8f88e16ad'
         '66416a216ac1f7597f72c6b7aee48ac3'
         'dc3e9d178c4245d0e990051093a92483'
-        '742a745373d1f873c3417e1defafd92e'
+        'f8ff664b58569552d617d9bb8df05a70 '
         '9ce538757edbdb49847677ef6520de5b'
         '9f0c964a1b046e8d930549915b468e35'
         '6bcf64b585c2fa791137e7df7426851c'
