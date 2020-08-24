@@ -44,7 +44,7 @@ DLAGENTS+=('manual::/usr/bin/echo The source file for this package needs to be d
 
 build() {
     cd $srcdir
-#    bsdtar -xf oracle-database-xe-18c-1.0-1.x86_64.rpm
+    bsdtar -xf oracle-database-xe-18c-1.0-1.x86_64.rpm
 }
 
 package() {
